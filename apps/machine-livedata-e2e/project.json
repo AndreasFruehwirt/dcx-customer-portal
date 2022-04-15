@@ -1,17 +1,17 @@
 {
-  "root": "apps/customer-portal-e2e",
-  "sourceRoot": "apps/customer-portal-e2e/src",
+  "root": "apps/machine-livedata-e2e",
+  "sourceRoot": "apps/machine-livedata-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/customer-portal-e2e/cypress.json",
-        "devServerTarget": "customer-portal:serve:development"
+        "cypressConfig": "apps/machine-livedata-e2e/cypress.json",
+        "devServerTarget": "machine-livedata:serve:development"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "customer-portal:serve:production"
+          "devServerTarget": "machine-livedata:serve:production"
         }
       }
     },
@@ -22,13 +22,13 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/customer-portal-e2e/**/*.{js,ts}"
+          "apps/machine-livedata-e2e/**/*.{js,ts}"
         ]
       }
     }
   },
   "tags": [],
   "implicitDependencies": [
-    "customer-portal"
+    "machine-livedata"
   ]
 }

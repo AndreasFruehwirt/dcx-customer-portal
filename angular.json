@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "customer-portal": "apps/customer-portal",
-    "customer-portal-e2e": "apps/customer-portal-e2e"
+    "customer-portal-e2e": "apps/customer-portal-e2e",
+    "machine-livedata": "apps/machine-livedata",
+    "machine-livedata-e2e": "apps/machine-livedata-e2e"
   }
 }
