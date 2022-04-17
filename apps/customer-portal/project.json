@@ -6,9 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/customer-portal",
         "index": "apps/customer-portal/src/index.html",
@@ -20,9 +18,7 @@
           "apps/customer-portal/src/favicon.ico",
           "apps/customer-portal/src/assets"
         ],
-        "styles": [
-          "apps/customer-portal/src/styles.scss"
-        ],
+        "styles": ["apps/customer-portal/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/customer-portal/webpack.config.js"
@@ -99,12 +95,17 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/customer-portal"
-      ],
+      "outputs": ["coverage/apps/customer-portal"],
       "options": {
         "jestConfig": "apps/customer-portal/jest.config.js",
         "passWithNoTests": true
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "commitMessageFormat": "chore(${projectName}): release version ${version}"
       }
     }
   },

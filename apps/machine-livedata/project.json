@@ -6,9 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/machine-livedata",
         "index": "apps/machine-livedata/src/index.html",
@@ -20,9 +18,7 @@
           "apps/machine-livedata/src/favicon.ico",
           "apps/machine-livedata/src/assets"
         ],
-        "styles": [
-          "apps/machine-livedata/src/styles.scss"
-        ],
+        "styles": ["apps/machine-livedata/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/machine-livedata/webpack.config.js"
@@ -99,12 +95,17 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/machine-livedata"
-      ],
+      "outputs": ["coverage/apps/machine-livedata"],
       "options": {
         "jestConfig": "apps/machine-livedata/jest.config.js",
         "passWithNoTests": true
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "commitMessageFormat": "chore(${projectName}): release version ${version}"
       }
     }
   },
